@@ -1,5 +1,5 @@
 const mongoose = require ('mongoose');
-
+const mongoosePaginate = require("mongoose-paginate");
 const ProductSchema = new mongoose.Schema({
 title: {
 type: String,
@@ -11,7 +11,7 @@ type:String,
 required:true,
 
 },
-url:{
+uzrl:{
 type:String,
 required:true,
 
@@ -23,5 +23,5 @@ default:Date.now,
 },
 
 });
-
+ProductSchema.plugin(mongoosePaginate);
 mongoose.model('Product', ProductSchema);
