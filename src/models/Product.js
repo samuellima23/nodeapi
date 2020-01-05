@@ -1,17 +1,16 @@
 const mongoose = require ('mongoose');
 const mongoosePaginate = require("mongoose-paginate");
 const ProductSchema = new mongoose.Schema({
-title: {
+Name: {
 type: String,
 required:true,
-
 },
 description:{
 type:String,
 required:true,
 
 },
-uzrl:{
+Loja:{
 type:String,
 required:true,
 

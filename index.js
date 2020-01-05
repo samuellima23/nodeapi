@@ -9,12 +9,14 @@ app.use(express.json());
 app.use(cors());
 //iniciando o db
 mongoose.connect('mongodb://localhost:27017/nodeapi', 
-{useNewUrlParser:true,useUnifiedTopology:true}
+{useNewUrlParser:true,useUnifiedTopology:true,useMongoClient:true}
 )
 
 require('./src/models/Product');
 
 //rotas
 app.use('/api', require('./src/routes'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extend: false}));
 
 app.listen(process.env.PORT || 3001);
