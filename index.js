@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors());
 //iniciando o db
 mongoose.connect('mongodb://localhost:27017/nodeapi', 
-{useNewUrlParser:true,useUnifiedTopology:true,useMongoClient:true}
+{useNewUrlParser:true,useUnifiedTopology:true}
 )
 
 require('./src/models/Product');
