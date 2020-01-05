@@ -16,7 +16,6 @@ require('./src/models/Product');
 
 //rotas
 app.use('/api', require('./src/routes'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extend: false}));
+
 
 app.listen(process.env.PORT || 3001);
