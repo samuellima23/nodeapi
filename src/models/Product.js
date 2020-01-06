@@ -1,7 +1,7 @@
 const mongoose = require ('mongoose');
 const mongoosePaginate = require("mongoose-paginate");
 const ProductSchema = new mongoose.Schema({
-Name: {
+title: {
 type: String,
 required:true,
 },
@@ -10,7 +10,7 @@ type:String,
 required:true,
 
 },
-Loja:{
+url:{
 type:String,
 required:true,
 
